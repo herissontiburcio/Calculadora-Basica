@@ -13,12 +13,21 @@ public class Main {
         operacoes.add(new Subtracao());
         operacoes.add(new Multiplicacao());
         operacoes.add(new Divisao());
+        operacoes.add(new RaizQuadrada());
+        operacoes.add(new Potenciacao());
+        operacoes.add(new Logaritmo());
 
+        try{
         System.out.print("Digite o primeiro número: ");
         num1 = dados.nextDouble();
 
         System.out.print("Digite o segundo número: ");
         num2 = dados.nextDouble();
+        } catch (Exception e) {
+            System.out.println("Entrada inválida. Verifique se você digitou números válidos.");
+            dados.close();
+            return;
+        }
 
         System.out.println("Escolha a operação que deseja realizar:");
 
